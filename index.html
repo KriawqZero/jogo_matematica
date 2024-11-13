@@ -1,0 +1,101 @@
+<!-- 
+ * Código do jogo escrito por Marcilio Ortiz
+ * no grupo de trabalho escolar de Geometria Plana 
+ * de Matemática 5 com a professora Mariana Manfroi.
+ * Turma: 20210 - 5º Semestre
+ * Alunos: Marcilio Ortiz - Desenvolvedor do script do jogo
+ * Davi - Design das imagens e da parte gráfica do jogo, também fez os labirintos
+ * Luiza Mabel - Designer das regras e panfletagem
+ * Maria Clara - Fez e analisou todas as questões e respostas das questões
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho Matemática</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+</head>
+<body>
+<div id="placeholder" class="justify-content-center text-center">
+    <!-- Div do timer e da congratulação -->
+    <h1 id="timer">00:00</h1>
+    <h1 id="winBox"></h1>
+    <h2><bold id="lifeCount">Vidas: 5</bold></h2>
+    <button id="resetButton" style="display: inline-block !important;" class="game-buttons btn btn-danger mb-2">Reiniciar</button>
+</div>
+
+<div id="blur-background" class="blur-background"></div>
+
+<!-- Menu Inicial -->
+<div id="startMenu">
+    <h2>Bem-vindo ao Labirinto Geométrico do IFMS</h2>
+    <label for="playerName">Insira seu nome para começar:</label>
+    <input type="text" id="playerName" placeholder="Digite seu nome"/>
+    <button id="startButton">Jogar</button>
+</div>
+
+<canvas id="mazeCanvas" width="640" height="640"></canvas>
+
+<div id="questionBox">
+    <div class="d-flex flex-column justify-content-center align-items-center p-3 border">
+        <h2 id="questionLifeCount" class="text-center"></h2>
+        <img alt="" id="questionImage" class="my-2" src=""/>
+        <label for="answerInput" id="questionText" class="text-center"></label>
+        <input type="text" id="answerInput" placeholder="Sua resposta" class="mb-2"/>
+
+        <div class="w-100 d-flex justify-content-between align-items-center mb-2">
+            <div>
+                <button id="btnSubmit" class="btn btn-primary me-2 my-1">Enviar</button>
+                <button id="btnGiveUp" class="btn btn-danger my-1">Desistir</button>
+            </div>
+            <button id="hintButton" class="mx-2 btn btn-warning text-center">
+                <span id="hintText">Mostrar Dica</span> <br/>
+                <span>Custo: 2 Vidas</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Controles de setas -->
+<div id="controls" class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-12 text-center">
+            <button class="btn btn-primary m-2" id="btnUp">↑</button>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-3 text-center">
+            <button class="btn btn-primary m-2" id="btnLeft">←</button>
+        </div>
+        <div class="col-3 text-center">
+            <button class="btn btn-primary m-2" id="btnRight">→</button>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-12 text-center">
+            <button class="btn btn-primary m-2" id="btnDown">↓</button>
+        </div>
+    </div>
+</div>
+
+<!-- Botões de Ajuda e Reiniciar -->
+<div class="game-buttons">
+    <button id="tutorialButton" class="btn btn-info">
+        Tutorial
+    </button>
+</div>
+
+<script type="module" src="js/helperFunctions.js"></script>
+<script type="module" src="js/consts.js"></script>
+<script type="module" src="js/main.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<footer style="font-size: 0.6rem" class="mt-auto">Jogo desenvolvido por Marcilio Ortiz, Davi Nunes, Luiza Mabel e Maria
+    Clara
+</footer>
+</body>
+</html>
