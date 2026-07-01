@@ -4,7 +4,7 @@ Um web game de labirinto focado em geometria plana, desenvolvido como trabalho a
 
 ## Contexto
 
-Este projeto foi construído em agosto de 2024. A proposta da disciplina era criar uma solução relacionada ao tema estudado no semestre (Geometria Plana). O trabalho foi realizado em grupo, onde atuei como o desenvolvedor responsável pela programação, enquanto os demais membros cuidaram do design visual, criação dos labirintos, formulação das questões matemáticas e elaboração das regras.
+Este projeto foi construído em novembro de 2024. A proposta da disciplina era criar uma solução relacionada ao tema estudado no semestre (Geometria Plana). O trabalho foi realizado em grupo, onde atuei como o desenvolvedor responsável pela programação, enquanto os demais membros cuidaram do design visual, criação dos labirintos, formulação das questões matemáticas e elaboração das regras.
 
 Todo o código foi escrito manualmente, utilizando tecnologias web padrão, sem motores de jogos ou geração de código por inteligência artificial.
 
